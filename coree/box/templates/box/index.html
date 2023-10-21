@@ -1,0 +1,48 @@
+<!-- FILEPATH: d:\break\dj\coree\box\templates\index.html -->
+
+{% extends "base.html" %}
+
+{% block start %}
+
+    <header>
+        <h1>Welcome to Our School</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="#">Academics</a></li>
+                <li><a href="#">Admissions</a></li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>About Us</h2>
+<table>
+            {% for people in peoples%}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{people.name}}</td>
+                <td>{{people.age}}</td>
+            <tr>
+            {% endfor %}
+</table>
+
+        
+            <p>We are a school dedicated to providing a quality education to our students.</p>
+        </section>
+        
+        <section>
+            <h2>Academics</h2>
+            <p>We offer a wide range of academic programs to meet the needs of our students.</p>
+        </section>
+        
+        <section>
+            <h2>Admissions</h2>
+            <p>Learn more about our admissions process and how to apply to our school.</p>
+        </section>
+    </main>
+
+    {% endblock start %}
